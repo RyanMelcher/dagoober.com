@@ -1,0 +1,13 @@
+# Common directories to ignore
+node_modules/
+public/
+
+# Temporary files
+.hugo_build.lock
+
+# Files and directories for local development
+.git/
+.gitignore
+.dockerignore
+README.md
+LICENSE

@@ -1,0 +1,7 @@
+baseURL = 'https://dagoober.com/'
+languageCode = 'en-us'
+title = '/ryan/'
+
+[module]
+[[module.imports]]
+    path = 'github.com/yukuro/hugo-theme-shell'

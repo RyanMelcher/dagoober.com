@@ -1,0 +1,18 @@
+services:
+  dagoober:
+    build: .
+    container_name: dagoober.com
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.dagoober-http.rule=Host(`dagoober.com`) || Host(`www.dagoober.com`)
+      - traefik.http.routers.dagoober-http.entrypoints=web
+      - traefik.http.routers.dagoober-https.rule=Host(`dagoober.com`) || Host(`www.dagoober.com`)
+      - traefik.http.routers.dagoober-https.entrypoints=websecure
+      - traefik.http.routers.dagoober-https.tls=true
+      - traefik.http.routers.dagoober-https.tls.certresolver=myresolver
+    networks:
+      - web
+
+networks:
+  web:
+    external: true

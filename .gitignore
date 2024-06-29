@@ -1,0 +1,8 @@
+# Hugo generated directories
+public/
+
+# Dependency directories
+node_modules/
+
+# Local development
+.hugo_build.lock
